@@ -41,7 +41,17 @@ Route::get('home/trangdiemso',[loginController::class,'show_score']);
 Route::post('/quenmatkhau',[loginController::class,'quenmatkhau2']);
 Route::get('/quenmatkhau/{id}',[loginController::class,'xuly_datlai']);
 Route::post('/update_password',[loginController::class,'update_password']);
-//
+//khoahoc
+Route::get('/home/khoahoc',[loginController::class,'khoahoc']);
+Route::get('home/chitietvideo/{id}',[loginController::class,'chitietvideo']);
+
+
+
+
+
+
+
+
 
 //admin
 Route::view('/admin','admin.admin');
@@ -68,8 +78,27 @@ Route::get('/edit_trochoi/{id}',[Question_Controller::class,'find_id_edit_trocho
 Route::put('/sswww',[Question_Controller::class,'edit_data_trochoi'])->name('edit_data_trochoi');
 Route::delete('delete_trochoi/{id}',[Question_Controller::class,'remove_data_trochoi']);
 Route::post('/post_questionss',[Question_Controller::class,'import_question_trochoi'])->name('import_question_trochoi');
+//quanlyvideo
+Route::get('admin/themvideo',[Question_Controller::class,'show_khoahoc']);
+Route::post('/themkhoahoc',[Question_Controller::class,'themkhoahoc']);
+Route::get('/admin/themvideo/{id}',[Question_Controller::class,'chitiet_khoahoc']);
 
-//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //giaovien
 Route::view('/giaovien','giaovien.index')->middleware('check_session_gv');
 Route::get('/giaovien/sinhvien',[sinhvien_Controller::class,'index'])->name('index.index1');
@@ -102,7 +131,8 @@ Route::delete('delete_diemdanh/{id}',[import_sinhvien::class,'remove_info_diemda
 Route::view('/game','game');
 Route::get('/verify_msv/{id}',[import_sinhvien::class,'get_check_msv']);
 Route::post('/verify_msv',[import_sinhvien::class,'check_msv_lat_long']);
-
+//hoconline
+Route::view('giaovien/hoc_online','giaovien.hoconline');
 
 //GMAIL
 Route::get('xacthuc/{id}',[loginController::class,'xacthuc_gmail']);

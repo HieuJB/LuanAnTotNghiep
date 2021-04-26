@@ -27,32 +27,38 @@
            </div>
        </div>
        <div class="tinhnang">
-            <div class="trangcanhan" style="width: 24%;">
+            <div class="trangcanhan" style="width: 20%;">
                 <div class="trangcanhan_img">
                 <img style="width: 90%;"  src="{{asset('img/lambaithi.png')}}">
                 </div>
-                <a href="home/trangcanhan"><button type="button" class="btn btn-primary">CÁ NHÂN</button></a>
+                <a href="home/trangcanhan"><button id="btn_sub" type="button" class="btn btn-primary">CÁ NHÂN</button></a>
             </div>
-            <div class="trangcanhan" style="width: 24%;">
+            <div class="trangcanhan" style="width: 20%;">
+              <div class="trangcanhan_img">
+              <img id="quiz_test" src="{{asset('img/youtube.png')}}">
+              </div>
+              <a href="home/khoahoc"><button type="button" id="btn_sub" class="btn btn-primary">KHÓA HỌC</button></a>
+            </div>
+            <div class="trangcanhan" style="width: 20%;">
                 <div class="trangcanhan_img">
                 <img id="quiz_test" src="{{asset('img/pro5.png')}}">
                 </div>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" id="btn_sub" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     LÀM BÀI THI
                 </button>
                 {{--  <a href="home/thuchanh"><button type="button" class="btn btn-primary">LÀM BÀI THI</button></a>  --}}
             </div>
-            <div class="trangcanhan" style="width: 24%;">
+            <div class="trangcanhan" style="width: 20%;">
                 <div class="trangcanhan_img">
                 <img id="quiz_test" src="{{asset('img/lichsu4.png')}}">
                 </div>
-                <a href="home/trangdiemso"><button type="button" class="btn btn-primary">LỊCH SỬ</button></a>
+                <a href="home/trangdiemso"><button type="button" id="btn_sub" class="btn btn-primary">LỊCH SỬ</button></a>
             </div>
-            <div class="trangcanhan" style="width: 25%;">
+            <div class="trangcanhan" style="width: 20%;">
               <div class="trangcanhan_img">
               <img  id="quiz_test" src="{{asset('img/logogame.png')}}">
               </div>
-              <a href="/game"><button type="button" class="btn btn-primary">QUIZ GAME</button></a>
+              <a href="/game"><button type="button" id="btn_sub" class="btn btn-primary">QUIZ GAME</button></a>
           </div>
        </div>
     </div>
@@ -92,3 +98,8 @@
 </div>
 </body>
 </html>
+<style>
+  #btn_sub{
+    font-size: 14px;
+  }
+</style>

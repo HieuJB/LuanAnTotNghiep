@@ -15,9 +15,9 @@
             <p>Mã học phần:{{$details['mhp']}}</p>
             <p>Tiêu đề:{{$details['tieude']}}</p>
             <p>Nội dung:{{$details['noidung']}}</p>
-            <p>Hạn cuối nộp bài:{{$details['ngayhancuoi']}}</p>
+            <p>Hạn cuối nộp bài:{{$details['ngayhancuoi']}}-{{$details['giohancuoi']}}</p>
             <P>Bạn có thể nộp bài bằng cách kích vào link phía dưới.</P>
-            <a href="http://172.20.10.3:9000/verify_msv_btvn/{{$details['giaovien']}}/{{$details['ramdom']}}"><button type="button" class="btn btn-primary">NỘP BÀI TẬP</button></a>
+            <a href="http://127.0.0.1:8000/verify_msv_btvn/{{$details['giaovien']}}/{{$details['ramdom']}}"><button type="button" class="btn btn-primary">NỘP BÀI TẬP</button></a>
             <p></p>
             <h5>Thân ái</h5>
             <p></p>

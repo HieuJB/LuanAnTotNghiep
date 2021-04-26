@@ -21,29 +21,35 @@
            </div>
        </div>
        <div class="tinhnang">
-            <div class="trangcanhan" style="width: 24%;" >
+            <div class="trangcanhan" style="width: 20%;" >
                 <div class="trangcanhan_img">
                 <img id="quiz_test" src="{{asset('img/logo3.png')}}">
                 </div>
-                <a href="admin/quanlytaikhoan"><button style="width: 70%;" type="button" class="btn btn-primary">QUẢN LÝ TÀI KHOẢN</button></a>
+                <a href="admin/quanlytaikhoan"><button id="btn_submit" style="width: 70%;" type="button" class="btn btn-primary">QUẢN LÝ TÀI KHOẢN</button></a>
             </div>
-            <div class="trangcanhan" style="width: 24%;">
+            <div class="trangcanhan" style="width: 20%;">
+                <div class="trangcanhan_img">
+                <img id="quiz_test" src="{{asset('img/youtube.png')}}">
+                </div>
+                <a href="admin/themvideo"><button id="btn_submit" style="width: 70%;" type="button" class="btn btn-primary">QUẢN LÝ KHÓA HỌC</button></a>
+            </div>
+            <div class="trangcanhan" style="width: 20%;">
                 <div class="trangcanhan_img">
                 <img id="quiz_test" src="{{asset('img/lichsu1.png')}}">
                 </div>
-                <a href="admin/themcauhoi"><button style="width: 70%;" type="button" class="btn btn-primary">QUẢN LÝ ĐỀ THI</button></a>
+                <a href="admin/themcauhoi"><button id="btn_submit" style="width: 70%;" type="button" class="btn btn-primary">QUẢN LÝ ĐỀ THI</button></a>
             </div>
-            <div class="trangcanhan" style="width: 24%;">
+            <div class="trangcanhan" style="width: 20%;">
                 <div class="trangcanhan_img">
                 <img id="quiz_test" src="{{asset('img/logogame.png')}}">
                 </div>
-                <a href="admin/trochoi"><button style="width: 70%;" type="button" class="btn btn-primary">QUẢN LÝ TRÒ CHƠI</button></a>
+                <a href="admin/trochoi"><button id="btn_submit" style="width: 70%;" type="button" class="btn btn-primary">QUẢN LÝ TRÒ CHƠI</button></a>
             </div>
-            <div class="trangcanhan" style="width: 24%;">
+            <div class="trangcanhan" style="width: 20%;">
                 <div class="trangcanhan_img">
                 <img id="quiz_test" src="{{asset('img/lichsu4.png')}}">
                 </div>
-                <a href="admin/trangxephang"><button style="width: 70%;" type="button" class="btn btn-primary">BẢNG XẾP HẠNG</button></a>
+                <a href="admin/trangxephang"><button id="btn_submit" style="width: 70%;" type="button" class="btn btn-primary">BẢNG XẾP HẠNG</button></a>
             </div>
        </div>
     </div>
@@ -51,3 +57,8 @@
     {{View::make('footer')}}
 </body>
 </html>
+<style>
+    #btn_submit{
+        font-size: 12px;
+    }
+</style>

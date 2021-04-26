@@ -27,38 +27,47 @@
            </div>
        </div>
        <div class="tinhnang">
-            <div style="width:24%;" class="trangcanhan">
+            <div style="width:20%;" class="trangcanhan">
                 <div class="trangcanhan_img">
                 <img id="quiz_test" src="{{asset('img/194931.png')}}">
                 </div>
-                <a href="/giaovien/sinhvien"><button type="button" class="btn btn-primary">SINH VIÊN</button></a>
+                <a  href="/giaovien/sinhvien"><button id="btn_sub" type="button" class="btn btn-primary">SINH VIÊN</button></a>
             </div>
-            <div style="width:24%" class="trangcanhan">
+            <div style="width:20%" class="trangcanhan">
                 <div class="trangcanhan_img">
                 <img id="quiz_test" src="{{asset('img/logo_bao_cao.png')}}">
                 </div>
                 {{--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     ĐIỂM DANH
                 </button>  --}}
-                <a href="/giaovien/themcauhoi"><button type="button" class="btn btn-primary">ĐIỂM DANH</button></a>
+                <a href="/giaovien/themcauhoi"><button id="btn_sub" type="button" class="btn btn-primary">ĐIỂM DANH</button></a>
             </div>
-            <div style="width:24%" class="trangcanhan">
+            <div style="width:20%" class="trangcanhan">
                 <div class="trangcanhan_img">
                 <img id="quiz_test" src="{{asset('img/logo_okmen.png')}}">
                 </div>
                 {{--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     ĐIỂM DANH
                 </button>  --}}
-                <a href="/giaovien/btvn"><button type="button" class="btn btn-primary">GIAO BÀI TẬP</button></a>
+                <a href="/giaovien/btvn"><button id="btn_sub" type="button" class="btn btn-primary">GIAO BÀI TẬP</button></a>
             </div>
-            <div style="width:24%" class="trangcanhan">
+            <div style="width:20%" class="trangcanhan">
                 <div class="trangcanhan_img">
                 <img id="quiz_test" src="{{asset('img/task.png')}}">
                 </div>
                 {{--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     ĐIỂM DANH
                 </button>  --}}
-                <a href="/full-calender"><button type="button" class="btn btn-primary">CÔNG VIỆC</button></a>
+                <a href="/full-calender"><button id="btn_sub" type="button" class="btn btn-primary">CÔNG VIỆC</button></a>
+            </div>
+            <div style="width:20%" class="trangcanhan">
+                <div class="trangcanhan_img">
+                <img id="quiz_test" src="{{asset('img/zoom.png')}}">
+                </div>
+                {{--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    ĐIỂM DANH
+                </button>  --}}
+                <a href="giaovien/hoc_online"><button id="btn_sub" type="button" class="btn btn-primary">HỌC ONLINE</button></a>
             </div>
        </div>
     </div>
@@ -69,3 +78,8 @@
 </div>
 </body>
 </html>
+<style>
+#btn_sub{
+    font-size: 12.9px;
+}
+</style>

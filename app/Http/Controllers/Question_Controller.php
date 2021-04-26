@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\model_question;
 use App\Models\table_api;
+use App\Models\model_khoahoc;
 use DataTables;
 use Excel;
 use App\Imports\import_question;
@@ -118,5 +119,30 @@ class Question_Controller extends Controller
         Excel::import(new import_question_trochoi,$req->file1);
         return redirect('/admin/trochoi')->with('themthanhcong','Thêm thành công');
         // return "them thanh cong";
+    }
+
+    public function show_khoahoc(){
+        $data=model_khoahoc::all();
+        return view('admin.themvideo',compact('data'));
+    }
+    public function themkhoahoc(Request $req){
+        // $name_img=$req->file('file')->getClientOriginalName();
+        // $req->file('file')->storeAs('public/img_imp',$name_img);
+        $filename=$req->file('file')->getClientOriginalName();
+        $req->file->move('img_imp',$filename);
+        
+        $data=new model_khoahoc();
+        $data->tieude=$req->tieude;
+        $data->mota=$req->mota;
+        $data->link="https://www.youtube.com/embed/".$req->link;
+        $data->file=$filename;
+        $data->save();
+        return redirect()->back();
+    }
+    public function chitiet_khoahoc($id){
+        $data=model_khoahoc::where('id',$id)->first();
+        if($data){
+            return view('admin.chitiet_khoahoc',compact('data'));
+        }
     }
 }

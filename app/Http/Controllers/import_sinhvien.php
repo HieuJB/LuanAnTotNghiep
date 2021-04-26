@@ -408,6 +408,7 @@ class import_sinhvien extends Controller
                         'tieude'=>$req->tieude,
                         'noidung'=>$req->noidung,
                         'ngayhancuoi'=>$req->ngayhancuoi,
+                        'giohancuoi'=>$req->giohancuoi,
                         'giaovien'=>session('email1'),
                         'ramdom'=>$data_checkss,
                     ];

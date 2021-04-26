@@ -9,6 +9,7 @@ use App\Models\Model_history;
 use App\Models\Model_score;
 use App\Models\Model_admin;
 use App\Models\phanloai;
+use App\Models\model_khoahoc;
 use App\Mail\Gmail;
 use App\Mail\quenmatkhau;
 use DataTables;
@@ -274,5 +275,13 @@ class loginController extends Controller
         $data->password=Hash::make($req->mk);
         $data->save();
         return redirect('/index');
+    }
+    public function khoahoc(){
+        $data=model_khoahoc::all();
+        return view('khoahoc',compact('data'));
+    }
+    public function chitietvideo($id){
+        $data=model_khoahoc::where('id',$id)->first();
+        return view('chitietvideo',compact('data'));
     }
 }

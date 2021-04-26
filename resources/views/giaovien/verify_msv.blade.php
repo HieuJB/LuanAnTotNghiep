@@ -36,7 +36,7 @@
 </head>
 <body>
     @if(Session::has('thatbai'))
-        <div style="text-align: center; width: 40%; margin-left: 30%; margin-right: 30%;" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <div style="text-align: center;" class="alert alert-danger alert-dismissible fade show" role="alert">
             {{Session::get('thatbai')}}
         </div>
     @endif
@@ -45,13 +45,11 @@
 
         @csrf
         <div class="form-group">
-        <h5 style="text-align: center; margin-top: 20px;">VUI LÒNG NHẤN CHO PHÉP TRUY CẬP VỊ TRÍ TRÊN ĐIỆN THOẠI CỦA BẠN TRƯỚC KHI NHẬP MÃ SINH VIÊN.</h5>
+        <h5 style="text-align: center; margin-top: 20px;">VUI LÒNG NHẬP MÃ SINH VIÊN.</h5>
         <label for="">MÃ SINH VIÊN:</label>
         <input type="text"
             class="form-control" name="msv" id="" aria-describedby="helpId" placeholder="Vui lòng nhập mã sinh viên tại đây...">
             <P></P>
-            <input hidden type="text" name="lat" id="latitude" value="">
-            <input hidden type="text" name="long" id="longitude" value="">
             <input hidden type="text" name="giaovien" value="{{$id}}">
             <P></P>
         </div>
@@ -61,11 +59,3 @@
 </html>
 
 
-<style>
-    #form_verify{
-        height: 300px;
-        width: 40%;
-        margin-left: 30%;
-        margin-right: 30%;
-    }
-</style>

@@ -82,6 +82,8 @@ Route::get('giaovien/themcauhoi',[import_sinhvien::class,'getdata_monhoc'])->nam
 Route::post('gdasjh',[import_sinhvien::class,'laythongtin_diemdanh']);
 Route::view('/okmen','giaovien.test');
 Route::get('/check_msv/{id}',[import_sinhvien::class,'check_msv']);
+// Route::get('/check_msv/{id}',[import_sinhvien::class,'hienthi_nhapsv']);
+
 Route::get('/showquestion_diemdanh/{id}',[import_sinhvien::class,'showquestion_diemdanh']);
 Route::post('/delete_session',[import_sinhvien::class,'xoa_db_session']);
 Route::post('/check_msv',[import_sinhvien::class,'check_msv']);

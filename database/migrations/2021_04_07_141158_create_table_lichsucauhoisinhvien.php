@@ -18,8 +18,6 @@ class CreateTableLichsucauhoisinhvien extends Migration
             $table->String('mahocphan');
             $table->String('buoi_hoc');
             $table->String('giaovien');
-            $table->String('lat');
-            $table->String('long');
             $table->timestamps();
         });
     }

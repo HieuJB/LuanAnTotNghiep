@@ -98,8 +98,6 @@ class import_sinhvien extends Controller
             $data->mahocphan=session('mahocphan');
             $data->buoi_hoc=session('buoi_hoc');
             $data->giaovien=session('email1');
-            $data->lat=$req->lat;
-            $data->long=$req->long;
             $data->save();
             return redirect('okmen');   
         }
@@ -119,6 +117,11 @@ class import_sinhvien extends Controller
             return "Bạn không có quyền truy cập khi không có sự đồng ý của giáo viên";
         }
     }
+    //
+    public function hienthi_nhapsv($id){
+        return view('giaovien.verify_msv',compact('id'));
+    }
+    //
     public function check_msv(Request $req){
         $data_show_hide="buoi".$req->buoi;
         $data_diem_show_hide="diembuoi".$req->buoi;
@@ -127,7 +130,7 @@ class import_sinhvien extends Controller
         if(!$data){
             return "MÃ SINH VIÊN CỦA BẠN KHÔNG TỒN TẠI!!!";
         }else{ 
-            
+
             for($i=1;$i<=count($req->q);$i++){
                 if($req->anscx[$i]==$req->a[$i]){
                     $score=$score+2;
@@ -357,11 +360,6 @@ class import_sinhvien extends Controller
             return back()->with('thatbai','MÃ SINH VIÊN CỦA BẠN KHÔNG TỒN TẠI!!!');
         }
         else {
-            $data_check=model_lichsucauhoidiemdanh::where('giaovien',$req->giaovien)->where('lat',$req->lat)->where('long',$req->long)->first();
-            if(!$data_check){
-                return back()->with('thatbai',"VỊ TRÍ CỦA BẠN KHÔNG HỢP LỆ");
-            }
-            else {
                 session()->put('msv_check',$req->msv);
                 $data_find=model_lichsucauhoidiemdanh::where('giaovien',$req->giaovien)->first();
                     if($data_find){
@@ -370,7 +368,6 @@ class import_sinhvien extends Controller
                         }else{
                             return "Bạn không có quyền truy cập khi không có sự đồng ý của giáo viên";
                         } 
-            }
         }
     }
 
@@ -406,7 +403,7 @@ class import_sinhvien extends Controller
                     // $data_checkEmail;
 
                     $details = [
-                        'tenmonhoc'=>$req->tenmonhoc,
+                        'tenmonhoc'=>$req->monhoc,
                         'mhp'=>$req->mhp,
                         'tieude'=>$req->tieude,
                         'noidung'=>$req->noidung,

@@ -17,7 +17,7 @@
             <p></p>
             <h5>Vui lòng kích vào link để xác nhận email của bạn.</h5>
             <p></p>
-            <a href="http://127.0.0.1:8000/xacthuc/{{$details['email']}}"><button type="button" class="btn btn-primary">XÁC NHẬN</button></a>
+            <a href="http://172.20.10.3:9000/xacthuc/{{$details['email']}}"><button type="button" class="btn btn-primary">XÁC NHẬN</button></a>
             <p></p>
             <h5>Thân ái</h5>
             <p></p>

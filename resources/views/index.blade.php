@@ -17,6 +17,7 @@
     @endif
     @if(Session::get('fail1'))
         <div class="alert alert-danger succ" role="alert">
+
         {{'Vui lòng nhập đầy đủ thông tin'}}
         </div>
     @endif

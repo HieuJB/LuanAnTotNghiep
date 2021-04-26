@@ -177,17 +177,7 @@
                         <option value="10">10</option>
                     </select>
                     <p></p>
-                    <div class="form-group">
-                      <label for="">LATITUDE</label>
-                      <input type="text"
-                        class="form-control" name="lat" id="lat" aria-describedby="helpId" placeholder="">
-                    </div>
-                    <P></P>
-                    <div class="form-group">
-                      <label for="">LONGITUDE</label>
-                      <input type="text"
-                        class="form-control" name="long" id="long" aria-describedby="helpId" placeholder="">
-                    </div>
+                  
                     <button style="width:50%;margin-left: 25%;margin-right: 25%;" type="submit" class="btn btn-primary">ĐIỂM DANH</button>            
                 </form>
               </div>

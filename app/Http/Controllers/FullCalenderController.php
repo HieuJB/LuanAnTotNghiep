@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
+use Session;
 
 class FullCalenderController extends Controller
 {
@@ -11,7 +12,7 @@ class FullCalenderController extends Controller
     {
     	if($request->ajax())
     	{
-    		$data = Event::where('taikhoan','hieujb')
+    		$data = Event::where('taikhoan',session('email1'))
                         ->whereDate('start', '>=', $request->start)
                         ->whereDate('end',   '<=', $request->end)
                         ->get(['id', 'title', 'start', 'end']);

@@ -69,7 +69,7 @@ class loginController extends Controller
                     'email' =>$data_checkss,
                 ];
                 Mail::to($req->email)->send(new Gmail($details));
-                return back()->with('thanhcong','sads');
+                return back()->with('thanhcong','Đăng kí thành công vui lòng xác nhận Mail trước khi đăng nhập.');
             }
             else{
                 return back()->with('fail','dsa');
@@ -193,9 +193,6 @@ class loginController extends Controller
     public function quanlytaikhoan_admin(Request $request){
         // $data = userModel::all();
         // return view('admin.quanlytaikhoan',compact('data'));
-
-
-
         $books = userModel::all();
         if($request->ajax()){
             $data = userModel::all();
@@ -208,8 +205,6 @@ class loginController extends Controller
             ->make(true);
         }
         return view('admin.quanlytaikhoan',compact('books'));
-
-
     }
     public function find_id_edit(Request $req){
         $Data_find = userModel::find($req->id);

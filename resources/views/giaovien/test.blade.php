@@ -56,7 +56,7 @@
 
     
     <form onsubmit="generate();return false;">
-        <input hidden type="text" id="qr" value="https://trunghieuit061099.000webhostapp.com/{{session('email1')}}" name="">
+        <input hidden type="text" id="qr" value="http://172.20.10.3:9000/verify_msv/{{session('email1')}}" name="">
     </form>
     <div id="qrResult" style="height: 600px;width: 600px; width: 40%; margin-left: 30%; margin-right: 30%;">
     </div>

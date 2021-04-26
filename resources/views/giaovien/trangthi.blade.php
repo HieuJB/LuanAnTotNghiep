@@ -62,10 +62,14 @@
         @csrf
         <?php  $count = 1; ?>
         @foreach($data as $question_show)
-        <div class="question_area">
-            <div class="questssion">
-            <li id="que">&ensp;Câu {{$count}}: {{$question_show->cauhoi}}</li>
-            </div>
+                  
+
+       
+        <div class="card">
+           <div class="card-header">
+            Câu {{$count}}: {{$question_show->cauhoi}}
+        </div>
+        <div class="card-body">
             <input hidden value="{{$question_show->cauhoi}}" name="q[{{$count}}]">
             <input hidden value="{{$question_show->ansa}}" name="ansa[{{$count}}]">
             <input hidden value="{{$question_show->ansb}}" name="ansb[{{$count}}]">
@@ -90,7 +94,7 @@
             &ensp;<label for="male">{{$question_show->ansd}}</label><br>
             </div>    
         </div>
-    </div>
+    
         <?php $count++; ?>
         @endforeach
 
@@ -121,32 +125,3 @@
 <script src="https://cdn.datatables.net/buttons/1.7.0/js/dataTables.buttons.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.html5.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.7.0/js/buttons.print.min.js"></script>
-<style>
-    #que{
-        list-style: none;
-        font-size: 24px;
-        font-weight: bold;
-    }
-    .question_area{
-        -webkit-box-shadow: 18px 36px 54px -22px rgba(0,0,0,0.75);
-        -moz-box-shadow: 18px 36px 54px -22px rgba(0,0,0,0.75);
-        box-shadow: 18px 36px 54px -22px rgba(0,0,0,0.75);
-        margin-top: 20px;
-    }
-    .questssion{
-        width: 100%;
-        height: auto;
-        background-color: rgb(98, 0, 255);
-        color: whitesmoke;
-        -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-        -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
-        box-shadow:         3px 3px 5px 6px #ccc;  
-    }
-    .ans{
-        width: 100%;
-        height: auto;
-        background-color: whitesmoke;
-        font-size: 17px;
-        font-weight: bold;
-    }
-</style>
